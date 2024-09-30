@@ -9,7 +9,7 @@
         "project-team": "Project team",
         "fui-jing-min": "Fui Jing Min",
         "lo-yong-zhe": "Lo Yong Zhe",
-        "jane-doe": "Jane Doe",
+        "teh-wai-hong": "Teh Wai Hong",
         "tan-san-chian": "Tan San Chian",
         "samson-chew-jun-jie": "Samson Chew Jun Jie"
       },
@@ -145,6 +145,14 @@
     },
     {
       "src": "team/johndoe.md",
+      "title": "John Doe's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/waihongteh.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
