@@ -2,25 +2,25 @@
 
 |User|
 start
-:Enter add student command;
+:Add student command entered;
 |System|
-if () then ([invalid command format])
+if (Is Command format valid?) then (no)
     |User|
     :Receive error message;
-else ([valid command format])
+else (yes)
     |System|
     :Parse command parameters;
     :Create Student object;
-    if () then ([duplicate student ID])
+    if (Is Duplicate student or Student ID?) then (yes)
         |User|
         :Receive error message;
-    else ([unique student ID])
-        if () then ([tutorial exists])
+    else (no)
+        if (Tutorial exists?) then (yes)
             :Add student to address book;
-            :Assign student to tutorial;
+            :Assign to tutorial;
             |User|
             :Receive success message;
-        else ([tutorial not exists])
+        else (no)
             |User|
             :Receive tutorial not found message;
         endif
