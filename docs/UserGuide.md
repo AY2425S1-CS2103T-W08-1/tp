@@ -202,7 +202,7 @@ Linux: Look at how to open a terminal [here.](https://ubuntu.com/tutorials/comma
 * `markAtt s/A1234567X c/T1001 d/2024-01-24`: Adds student of id `A1234567X` attendance to the tutorial id `T1001` on the da
   date `2024-01-24`.
 * `list` : Lists all contacts.
-* `clear` : Deletes all contacts.
+* `clear` : Clears all data from TrackMate.
 * `exit` : Exits the app.
 
 10. Refer to the [Command Section](#commands) below for details of
