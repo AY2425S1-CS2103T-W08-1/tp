@@ -197,11 +197,11 @@ Linux: Look at how to open a terminal [here.](https://ubuntu.com/tutorials/comma
 9. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
    Some example commands you can try:
 
-* `list` : Lists all contacts.
-* `addTut c/CS2103T id/T1001` : Adds a tutorial of name `CS2103T` and tutorial id `T1001`.
-* `add n/Samson  s/A1234567X c/T1001` : Adds a student to the application and assigns him to tutorial with tutorial id `T1001`.
-* `addAtt s/A1234567X c/T1001 d/2024-01-24`: Adds student of id `A1234567X` attendance to the tutorial id `T1001` on the da
+* `addTut tn/CS2103T c/T1001` : Adds a tutorial of name `CS2103T` and tutorial id `T1001`.
+* `addStu n/Samson  s/A1234567X c/T1001` : Adds a student to the application and assigns him to tutorial with tutorial id `T1001`.
+* `markAtt s/A1234567X c/T1001 d/2024-01-24`: Adds student of id `A1234567X` attendance to the tutorial id `T1001` on the da
   date `2024-01-24`.
+* `list` : Lists all contacts.
 * `clear` : Deletes all contacts.
 * `exit` : Exits the app.
 
