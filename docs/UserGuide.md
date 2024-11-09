@@ -201,7 +201,7 @@ Linux: Look at how to open a terminal [here.](https://ubuntu.com/tutorials/comma
 * `addStu n/Samson  s/A1234567X c/T1001` : Adds a student to the application and assigns him to tutorial with tutorial id `T1001`.
 * `markAtt s/A1234567X c/T1001 d/2024-01-24`: Adds student of id `A1234567X` attendance to the tutorial id `T1001` on the da
   date `2024-01-24`.
-* `list` : Lists all contacts.
+* `list` : Lists all student details.
 * `clear` : Clears all data from TrackMate.
 * `exit` : Exits the app.
 
