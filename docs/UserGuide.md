@@ -175,11 +175,13 @@ First-time users are strongly encouraged to read the Getting Started section bef
    that you want to keep your `TrackMate.jar` file in.
 
 
-4. Go to your command terminal by pressing Windows Key + R. A small window should pop up.
+4. Go to your command terminal by following the instructions below, depending the OS that you use.
 
+Windows: Look at how to open a terminal [here.](https://www.lifewire.com/how-to-open-command-prompt-2618089)
 
-5. Then type in cmd into the box and press enter. A command terminal should pop up.
+MacOS: Look at how to open a terminal [here.](https://support.apple.com/en-sg/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Click%20the%20Launchpad%20icon%20in,%2C%20then%20double%2Dclick%20Terminal.)
 
+Linux: Look at how to open a terminal [here.](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
 
 6. Navigate to the directory that holds the `TrackMate.jar` application by using the [cd command](https://www.ibm.com/docs/en/aix/7.1?topic=directories-changing-another-directory-cd-command).
 
