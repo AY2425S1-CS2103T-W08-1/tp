@@ -2,6 +2,8 @@ package seedu.address.ui;
 
 import java.util.logging.Logger;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
@@ -16,6 +18,7 @@ import seedu.address.logic.Logic;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.student.Student;
 
 /**
  * The Main Window. Provides the basic application layout containing
@@ -34,6 +37,8 @@ public class MainWindow extends UiPart<Stage> {
     private StudentProfile studentProfile;
     private ResultDisplay resultDisplay;
     private HelpWindow helpWindow;
+    private final ObjectProperty<Student> selectedStudent = new SimpleObjectProperty<>();
+
 
     @FXML
     private StackPane commandBoxPlaceholder;
@@ -103,6 +108,7 @@ public class MainWindow extends UiPart<Stage> {
     void fillInnerParts() {
         // Create and add the StudentProfile panel if it's not null
         studentProfile = new StudentProfile();
+        studentProfile.bindToSelectedStudent(selectedStudentProperty());
         if (studentProfile != null && studentProfile.getRoot() != null) {
             studentDetailsContainer.getChildren().add(studentProfile.getRoot());
         }
@@ -176,6 +182,15 @@ public class MainWindow extends UiPart<Stage> {
         return studentListPanel;
     }
 
+    // Setter method for selectedStudent
+    public void setSelectedStudent(Student student) {
+        selectedStudent.set(student);
+    }
+
+    // Getter method for selectedStudent property
+    public ObjectProperty<Student> selectedStudentProperty() {
+        return selectedStudent;
+    }
     /**
      * Executes the command and returns the result.
      *
@@ -194,6 +209,7 @@ public class MainWindow extends UiPart<Stage> {
             if (commandResult.isExit()) {
                 handleExit();
             }
+
             return commandResult;
         } catch (CommandException | ParseException | RuntimeException e) {
             logger.info("An error occurred while executing command: " + commandText);

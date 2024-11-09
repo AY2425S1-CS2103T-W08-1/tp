@@ -1,5 +1,6 @@
 package seedu.address.ui;
 
+import javafx.beans.property.ObjectProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
@@ -74,5 +75,16 @@ public class StudentProfile extends UiPart<Region> {
             return false;
         }
         return otherStudent.equals(student);
+    }
+    /**
+     * Binds this profile to the selected student property in MainWindow.
+     * When the selected student changes, this profile will update to show the new student's details.
+     *
+     * @param selectedStudentProperty the property in MainWindow that holds the selected student.
+     */
+    public void bindToSelectedStudent(ObjectProperty<Student> selectedStudentProperty) {
+        selectedStudentProperty.addListener((observable, oldStudent, newStudent) -> {
+            setStudent(newStudent);
+        });
     }
 }
