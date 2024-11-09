@@ -191,7 +191,7 @@ Linux: Look at how to open a terminal [here.](https://ubuntu.com/tutorials/comma
 
 8. Wait a few seconds and a GUI should pop up, similar to the one shown below.
 
-![startingGUI.png](images/startingGUI.png)
+![startingGUI.png](images/startingGUI2.png)
 
 
 9. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
