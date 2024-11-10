@@ -197,7 +197,7 @@ Linux: Look at how to open a terminal [here.](https://ubuntu.com/tutorials/comma
 9. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
    Some example commands you can try:
 
-* `addTut tn/CS2103T c/T1001` : Adds a tutorial of name `CS2103T` and tutorial id `T1001`.
+* `addTut tn/CS2103T W01 c/T1001` : Adds a tutorial of name `CS2103T W01` and tutorial id `T1001`. 
 * `addStu n/Samson  s/A1234567X c/T1001` : Adds a student to the application and assigns him to tutorial with tutorial id `T1001`.
 * `markAtt s/A1234567X c/T1001 d/2024-01-24`: Adds student of id `A1234567X` attendance to the tutorial id `T1001` on the da
   date `2024-01-24`.
@@ -344,6 +344,7 @@ section for detailed information
 **Format:** `addStu n/NAME s/STUDENT_ID [c/TUTORIAL_ID]`
 
 >**Tip:** You can add a student without specifying a tutorial ID!
+> 
 >**Warning** You will need to add a tutorial before assign student to new tutorial
 
 Command detail & constraints:
@@ -420,12 +421,19 @@ Example:
 ### 4.2 Tutorial Data Related Commands:
 <a id="tutorial-data-commands"></a>
 
+>**Warning:** This application is only catered to only one module.
+
 #### 4.2.1 Adding a tutorial: `addTut`
 <a id="adding-a-tutorial-addTut"></a>
 
 > Adds a tutorial with a specified tutorial name and tutorial id to the TrackMate application.
- 
+
 Format: `addTut tn/[TUTORIAL NAME] id/[TUTORIAL ID]`
+
+>**Warning:** This application is only catered to only one module, thus you cannot have Tutorial Names being named after different modules.
+> 
+>**Tip:** For applications that you have trouble giving a name in, use the module name as the tutorial name. (ie. CS2103T)  
+> 
 
 Command Details & Constraints:
 * Adds the tutorial based on its `TUTORIAL_NAME` and `TUTORIAL_ID`
@@ -437,6 +445,10 @@ and `X` must be an integer between 0 and 9.
 Example:
 1. `addTut tn/CS2103T id/T1001` adds a tutorial with Tutorial Name `CS2103T` and Tutorial ID `T1001`, provided that there is
 no other tutorial with the Tutorial ID `T1001`.
+
+>**Note:** We can have tutorials with different tutorial names and the same tutorial id to support better flexibility over classes.
+> For example, there can be 2 tutorial classes with `TUTORIAL_NAME` `CS2103T-W08`, but can have 2 different tutorial ids to account for the 2 different groups.
+>
 
 #### 4.2.2 Delete a tutorial: `deleteTut`
 <a id="deleting-a-tutorial-deleteTut"></a>

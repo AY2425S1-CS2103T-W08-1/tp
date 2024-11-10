@@ -76,7 +76,7 @@ public class TutNameTest {
     @Test
     public void equals_differentObjectWithDifferentName_returnsFalse() {
         TutName tutName1 = new TutName("CS1010");
-        TutName tutName2 = new TutName("CS2020");
+        TutName tutName2 = new TutName("CS1010 Advanced");
         assertNotEquals(tutName1, tutName2);
     }
 
