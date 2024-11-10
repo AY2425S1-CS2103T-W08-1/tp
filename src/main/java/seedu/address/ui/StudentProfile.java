@@ -1,6 +1,8 @@
 package seedu.address.ui;
 
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.SetChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -32,6 +34,15 @@ public class StudentProfile extends UiPart<Region> {
     private final SetChangeListener<TutDate> attendanceDateListener = change -> {
         updateAttendanceFlowPane();
     };
+
+    // Listeners for individual student properties
+    private final ChangeListener<String> nameChangeListener = (observable, oldName, newName)
+            -> nameLabel.setText(newName);
+    private final ChangeListener<String> studentIdChangeListener = (observable, oldId, newId)
+            -> studentIdLabel.setText(newId);
+    private final ChangeListener<String> tutorialIdChangeListener = (observable, oldTutorialId, newTutorialId)
+            -> tutorialIdLabel.setText(newTutorialId);
+
     /**
      * Creates a {@code StudentProfile} to display the details of a student.
      */
@@ -89,6 +100,7 @@ public class StudentProfile extends UiPart<Region> {
         }
         return otherStudent.equals(student);
     }
+
     /**
      * Binds this profile to the selected student property in MainWindow.
      * When the selected student changes, this profile will update to show the new student's details.
@@ -97,9 +109,29 @@ public class StudentProfile extends UiPart<Region> {
      */
     public void bindToSelectedStudent(ObjectProperty<Student> selectedStudentProperty) {
         selectedStudentProperty.addListener((observable, oldStudent, newStudent) -> {
+            // Detach listeners from the old student's properties
+            if (oldStudent != null) {
+                oldStudent.getPresentDates().getDates().removeListener(attendanceDateListener);
+                new SimpleStringProperty(oldStudent.getName().toString()).removeListener(nameChangeListener);
+                new SimpleStringProperty(oldStudent.getStudentId().toString()).removeListener(studentIdChangeListener);
+                new SimpleStringProperty(oldStudent.getTutorialId().toString())
+                        .removeListener(tutorialIdChangeListener);
+            }
+
+            // Update to the new student
             setStudent(newStudent);
+
+            // Attach listeners to the new student's properties
+            if (newStudent != null) {
+                newStudent.getPresentDates().getDates().addListener(attendanceDateListener);
+                new SimpleStringProperty(newStudent.getName().toString()).removeListener(nameChangeListener);
+                new SimpleStringProperty(newStudent.getStudentId().toString()).removeListener(studentIdChangeListener);
+                new SimpleStringProperty(newStudent.getTutorialId().toString())
+                        .removeListener(tutorialIdChangeListener);
+            }
         });
     }
+
     private void updateAttendanceFlowPane() {
         attendanceFlowPane.getChildren().clear();
         student.getPresentDates().getDates().forEach(date -> {

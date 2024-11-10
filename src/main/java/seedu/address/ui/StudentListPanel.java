@@ -29,10 +29,6 @@ public class StudentListPanel extends UiPart<Region> {
         this.studentProfile = studentProfile;
         studentListView.setItems(studentList);
         studentListView.setCellFactory(listView -> new StudentListViewCell());
-        studentListView.getSelectionModel().selectedItemProperty().addListener((observable, oldStudent, newStudent) -> {
-            studentProfile.setStudent(newStudent); // Update profile with the selected student
-        });
-        // Listen for deletion and clear profile if the deleted student is the selected one
         DeleteCommand.getStudentProperty().addListener((observable, oldValue, newValue) -> {
             if (StudentProfile.isSameStudent(newValue)) {
                 studentProfile.setStudent(null);
