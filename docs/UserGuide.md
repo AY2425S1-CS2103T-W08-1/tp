@@ -345,7 +345,7 @@ section for detailed information
 
 >**Tip:** You can add a student without specifying a tutorial ID!
 > 
->**Warning** You will need to add a tutorial before assign student to new tutorial
+>**Warning** You will need to add a tutorial before assign student to new tutorial. 
 
 Command detail & constraints:
 
@@ -422,6 +422,8 @@ Example:
 <a id="tutorial-data-commands"></a>
 
 >**Warning:** This application is only catered to only one module.
+>
+>**Warning** One student can only be added to one tutorial.
 
 #### 4.2.1 Adding a tutorial: `addTut`
 <a id="adding-a-tutorial-addTut"></a>
@@ -624,7 +626,7 @@ Example:
 
 > View a single student's details in a formatted and organized manner.
 
-**Method -  Using GUI**: Left-click on a specific Student Panel Card within the Student List Panel of the TrackMate User Interface.
+**Method -  Using GUI**: Left-click twice on a specific Student Panel Card within the Student List Panel of the TrackMate User Interface.
 
 #### 4.5.2 Clearing all data: `clear`
 <a id="clearing-all-data"></a>
