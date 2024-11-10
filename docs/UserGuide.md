@@ -167,7 +167,7 @@ First-time users are strongly encouraged to read the Getting Started section bef
    that you want to keep your `TrackMate.jar` file in.
 
 
-4. Go to your command terminal by following the instructions below, depending the OS that you use.
+4. Go to your command terminal by following the instructions below, depending on the OS that you use.
 
 Windows: Look at how to open a terminal [here.](https://www.lifewire.com/how-to-open-command-prompt-2618089)
 
