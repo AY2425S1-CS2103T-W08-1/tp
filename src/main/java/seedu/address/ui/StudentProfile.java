@@ -1,11 +1,13 @@
 package seedu.address.ui;
 
 import javafx.beans.property.ObjectProperty;
+import javafx.collections.SetChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Region;
 import seedu.address.model.student.Student;
+import seedu.address.model.tut.TutDate;
 
 /**
  * A UI component that displays detailed information about a {@code Student}.
@@ -24,7 +26,12 @@ public class StudentProfile extends UiPart<Region> {
     private Label tutorialIdLabel;
     @FXML
     private FlowPane attendanceFlowPane;
-
+    /**
+     * Listener for attendance dates that updates the attendance display when dates change.
+     */
+    private final SetChangeListener<TutDate> attendanceDateListener = change -> {
+        updateAttendanceFlowPane();
+    };
     /**
      * Creates a {@code StudentProfile} to display the details of a student.
      */
@@ -37,6 +44,10 @@ public class StudentProfile extends UiPart<Region> {
      * @param student The student whose details should be displayed.
      */
     public void setStudent(Student student) {
+        if (this.student != null) {
+            // Remove the listener from the previous student's attendance dates
+            this.student.getPresentDates().getDates().removeListener(attendanceDateListener);
+        }
         if (student == null) {
             clearProfile();
             return;
@@ -53,6 +64,8 @@ public class StudentProfile extends UiPart<Region> {
             dateLabel.getStyleClass().add("attendance-date-label");
             attendanceFlowPane.getChildren().add(dateLabel);
         });
+
+        student.getPresentDates().getDates().addListener(attendanceDateListener);
     }
 
     /**
@@ -85,6 +98,14 @@ public class StudentProfile extends UiPart<Region> {
     public void bindToSelectedStudent(ObjectProperty<Student> selectedStudentProperty) {
         selectedStudentProperty.addListener((observable, oldStudent, newStudent) -> {
             setStudent(newStudent);
+        });
+    }
+    private void updateAttendanceFlowPane() {
+        attendanceFlowPane.getChildren().clear();
+        student.getPresentDates().getDates().forEach(date -> {
+            Label dateLabel = new Label(date.toString());
+            dateLabel.getStyleClass().add("attendance-date-label");
+            attendanceFlowPane.getChildren().add(dateLabel);
         });
     }
 }
