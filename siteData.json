@@ -70,8 +70,7 @@
         "deleting-a-student": "Deleting a student",
         "marking-attendance": "Marking attendance",
         "marking-unmarking-assignment": "Marking/Unmarking assignment",
-        "saving-data": "Saving data",
-        "future-enhancements-2": "Future Enhancements"
+        "saving-data": "Saving data"
       },
       "headingKeywords": {}
     },
@@ -138,7 +137,6 @@
         "4-6-saving-the-data": "4.6 Saving the data",
         "4-7-editing-the-data-file": "4.7 Editing the data file",
         "5-faq": "5. FAQ",
-        "q-can-this-app-be-used-to-handle-multiple-modules-a-while-this-app-allows-for-flexibility-in-naming-your-tutorials-it-should-not-be-used-to-handle-multiple-modules": "Q: Can this app be used to handle multiple modules?\nA: While this app allows for flexibility in naming your tutorials, it should not be used to handle multiple modules.",
         "6-known-issues": "6 Known issues",
         "7-glossary": "7. Glossary",
         "8-command-summary": "8. Command summary"
