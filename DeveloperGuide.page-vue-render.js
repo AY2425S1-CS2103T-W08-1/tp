@@ -566,6 +566,6 @@ with(this){return _c('h3',{attrs:{"id":"future-enhancements-2"}},[_v("Future Enh
 with(this){return _c('ol',[_c('li',[_v("For future enhancements, we plan to make the student profile more responsive to commands, such that when the selected students have their data edited, the student profile will update as well.\nHowever, for now, for the student profile to update, double-click on the student card.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Mon, 11 Nov 2024, 20:06:21 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Mon, 11 Nov 2024, 20:36:24 GMT+8]")])])])}
 }];
   
