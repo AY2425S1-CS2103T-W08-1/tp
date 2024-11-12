@@ -518,7 +518,7 @@ with(this){return _c('h3',{attrs:{"id":"editing-a-student"}},[_v("Editing a stud
 with(this){return _c('blockquote',[_c('p',[_c('strong',[_v("Prerequisite 1:")]),_v(" At least one student exists in the list. For example, a student at index 1.")])])}
 },function anonymous(
 ) {
-with(this){return _c('blockquote',[_c('p',[_c('strong',[_v("Prerequisite 2:")]),_v(" Ensure that the tutorial T1001 exists in the system.")])])}
+with(this){return _c('blockquote',[_c('p',[_c('strong',[_v("Prerequisite 2:")]),_v(" Ensure that the tutorial T2001 exists in the system.")])])}
 },function anonymous(
 ) {
 with(this){return _c('blockquote',[_c('p',[_c('strong',[_v("Prerequisite 3:")]),_v(" Ensure that no student with student ID \"A7654321X\" exists in the system.")])])}
@@ -560,6 +560,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing data files")]),_v(" "),_c('ol',[_c('li',[_v("Simulate a missing data file:\n"),_c('ul',[_c('li',[_v("Close the application.")]),_v(" "),_c('li',[_v("Navigate to the data directory where the application stores its data files.")]),_v(" "),_c('li',[_v("Delete the data file (e.g., addressbook.json).")])])]),_v(" "),_c('li',[_v("Re-launch the application."),_c('br'),_v("\nExpected: The application starts with an empty data set. A new data file is created automatically.")])])]),_v(" "),_c('li',[_c('p',[_v("Dealing with corrupted data files")]),_v(" "),_c('ol',[_c('li',[_v("Simulate a corrupted data file:\n"),_c('ul',[_c('li',[_v("Close the application.")]),_v(" "),_c('li',[_v("Open the data file (e.g., addressbook.json) with a text editor.")]),_v(" "),_c('li',[_v("Introduce invalid JSON syntax (e.g., delete a closing brace or add random text).")]),_v(" "),_c('li',[_v("Save the file.")])])]),_v(" "),_c('li',[_v("Re-launch the application."),_c('br'),_v("\nExpected: The application detects the corrupted data file and displays an error message in the terminal. It will then start with an empty data set.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 12 Nov 2024, 10:32:39 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Tue, 12 Nov 2024, 10:35:23 GMT+8]")])])])}
 }];
   
