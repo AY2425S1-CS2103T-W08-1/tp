@@ -38,6 +38,7 @@
     },
     {
       "src": "DeveloperGuide.md",
+      "title": "Developer Guide",
       "headings": {
         "trackmate-developer-guide": "TrackMate Developer Guide",
         "acknowledgements": "Acknowledgements",
